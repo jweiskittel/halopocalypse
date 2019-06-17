@@ -1,0 +1,12 @@
+.input-group {
+    width: 30%;
+    margin-top: 4px;
+}
+
+input {
+    padding: 5px
+}
+
+i {
+    color: gray
+}

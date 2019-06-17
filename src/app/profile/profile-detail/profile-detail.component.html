@@ -1,0 +1,13 @@
+<div class="row" *ngIf='profile'>
+  <div class="col-md-3">
+    <img src="{{ emblem }}" alt="{{ profile.Gamertag }}'s Emblem">
+  </div>
+  <div class="col-md-3">
+    <h1>{{ profile.Gamertag }}</h1>
+    <h3>{{ profile.ServiceTag }}</h3>
+    <h4 *ngIf='profile.Company !== null'>{{ profile.Company.Name }}</h4>
+  </div>
+  <div class="col md-6">
+    <img src="{{ spartan }}" alt="{{ profile.Gamertag }}'s Spartan'">
+  </div>
+</div>
