@@ -1,0 +1,17 @@
+<h1>Halo 5 Enemies</h1>
+<h2>Covenant</h2>
+<div class="row">
+  <div class="col-md-4" *ngFor='let enemy of covenant'>
+    <img src="{{ enemy.smallIconImageUrl }}" alt="{{ enemy.name }}">
+    <h3>{{ enemy.name }} - {{ enemy.faction }}</h3>
+    <h4>{{ enemy.description }}</h4>
+  </div>
+</div>
+<h2>Promethean</h2>
+<div class="row">
+    <div class="col-md-4" *ngFor='let enemy of promethean'>
+      <img src="{{ enemy.smallIconImageUrl }}" alt="{{ enemy.name }}">
+      <h3>{{ enemy.name }} - {{ enemy.faction }}</h3>
+      <h4>{{ enemy.description }}</h4>
+    </div>
+  </div>

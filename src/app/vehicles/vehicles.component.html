@@ -1,0 +1,25 @@
+<h1>Halo 5 Vehicles</h1>
+<h2>UNSC</h2>
+<div class="row">
+  <div class="col-md-4" *ngFor='let vehicle of unsc'>
+    <img src="{{ vehicle.smallIconImageUrl }}" alt="{{ vehicle.name }}">
+    <h3>{{ vehicle.name }}</h3>
+    <h4>{{ vehicle.description }}</h4>
+  </div>
+</div>
+<h2>Covenant</h2>
+<div class="row">
+  <div class="col-md-4" *ngFor='let vehicle of covenant'>
+    <img src="{{ vehicle.smallIconImageUrl }}" alt="{{ vehicle.name }}">
+    <h3>{{ vehicle.name }}</h3>
+    <h4>{{ vehicle.description }}</h4>
+  </div>
+</div>
+<h2>Promethean</h2>
+<div class="row">
+  <div class="col-md-4" *ngFor='let vehicle of promethean'>
+    <img src="{{ vehicle.smallIconImageUrl }}" alt="{{ vehicle.name }}">
+    <h3>{{ vehicle.name }}</h3>
+    <h4>{{ vehicle.description }}</h4>
+  </div>
+</div>

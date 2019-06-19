@@ -1,0 +1,15 @@
+<h2>Weapons</h2>
+<div class="row">
+  <div class="col-md-4" *ngFor='let weapon of weapons'>
+    <img src="{{ weapon.smallIconImageUrl }}" alt="{{ weapon.name }}">
+    <h3>{{ weapon.name }}</h3>
+  </div>
+</div>
+<br><br><br><br>
+<h2>Grenades</h2>
+<div class="row">
+  <div class="col-md-4" *ngFor='let grenade of grenades'>
+    <img src="{{ grenade.smallIconImageUrl }}" alt="{{ grenade.name }}">
+    <h3>{{ grenade.name }}</h3>
+  </div>
+</div>

@@ -10,15 +10,14 @@ headers = headers.append('Ocp-Apim-Subscription-Key', APIKEY);
 @Injectable({
   providedIn: 'root'
 })
-export class MapsService {
+export class ArenaStatsService {
 
-  constructor(private http: HttpClient) {
-   }
+  constructor(private http: HttpClient) { }
 
-   getMaps() {
-     return this.http.get('https://www.haloapi.com/metadata/h5/metadata/maps', {
-        headers: headers
-     });
-   }
+  getStats(gamertag: string) {
+    return this.http.get(`https://www.haloapi.com/stats/h5/servicerecords/arena?players=${gamertag}`, {
+      headers: headers
+    });
+  }
 
 }

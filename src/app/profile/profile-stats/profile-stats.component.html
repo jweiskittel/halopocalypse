@@ -1,0 +1,9 @@
+<select #weaponId (change)='show()'>
+  <option selected disabled hidden>Select a weapon</option>
+  <option *ngFor='let weapon of weapons' value={{weapon.id}}>{{ weapon.name }}</option>
+</select>
+
+<h2>{{ selectedWeapon[0].name }}</h2>
+<p>Kills: {{ selectedArenaWeapon[0].TotalKills }}</p>
+<p>Headshot Kills: {{ selectedArenaWeapon[0].TotalHeadshots }}</p>
+<p>Accuracy: {{ selectedArenaWeapon[0].TotalShotsLanded / selectedArenaWeapon[0].TotalShotsFired * 100 }} </p>

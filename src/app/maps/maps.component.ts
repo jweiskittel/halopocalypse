@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MapsService } from '../services/maps.service';
+import { MetadataService } from '../services/metadata.service';
 import { Map } from '../models/maps.model';
 
 @Component({
@@ -10,13 +10,12 @@ import { Map } from '../models/maps.model';
 export class MapsComponent implements OnInit {
   maps: Map[];
 
-  constructor(private mapService: MapsService) { }
+  constructor(private mapService: MetadataService) { }
 
   ngOnInit() {
     this.mapService.getMaps().subscribe(
       (maps: Map[]) => {
         this.maps = maps;
-        console.log(this.maps[0].supportedGameModes);
       }
     );
   }

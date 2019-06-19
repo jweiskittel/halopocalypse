@@ -10,6 +10,11 @@ import { MapsComponent } from './maps/maps.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileDetailComponent } from './profile/profile-detail/profile-detail.component';
+import { WeaponsComponent } from './weapons/weapons.component';
+import { ProfileStatsComponent } from './profile/profile-stats/profile-stats.component';
+import { VehiclesComponent } from './vehicles/vehicles.component';
+import { EnemiesComponent } from './enemies/enemies.component';
+import { RanksComponent } from './ranks/ranks.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +23,12 @@ import { ProfileDetailComponent } from './profile/profile-detail/profile-detail.
     MapsComponent,
     ProfileComponent,
     HomeComponent,
-    ProfileDetailComponent
+    ProfileDetailComponent,
+    WeaponsComponent,
+    ProfileStatsComponent,
+    VehiclesComponent,
+    EnemiesComponent,
+    RanksComponent
   ],
   imports: [
     BrowserModule,

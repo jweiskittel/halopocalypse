@@ -7,6 +7,10 @@
         <ul class="nav navbar-nav">
           <li routerLinkActive='active'><a routerLink='/home'>Home</a></li>
           <li routerLinkActive='active'><a routerLink='/maps'>Maps</a></li>
+          <li routerLinkActive='active'><a routerLink='/weapons'>Weapons</a></li>
+          <li routerLinkActive='active'><a routerLink='/enemies'>Enemies</a></li>
+          <li routerLinkActive='active'><a routerLink='/vehicles'>Vehicles</a></li>
+          <li routerLinkActive='active'><a routerLink='/ranks'>Ranks</a></li>
         </ul>
         <div class="input-group nav navbar-nav navbar-right">
             <input 
@@ -15,9 +19,10 @@
               name='gamertag'
               placeholder="Search Gamertag" 
               type="text"
+              (keyup.enter)='findProfile()'
               #gamertag>
               <span class="input-group-btn">
-                <button class="btn btn-default" (click)='findProfile()'>
+                <button class="btn btn-default" type='submit' (click)='findProfile()'>
                   <i class="glyphicon glyphicon-search"></i>
                 </button>
               </span>
