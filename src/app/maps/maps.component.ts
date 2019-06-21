@@ -16,6 +16,7 @@ export class MapsComponent implements OnInit {
     this.mapService.getMaps().subscribe(
       (maps: Map[]) => {
         this.maps = maps;
+        console.log(this.maps);
       }
     );
   }

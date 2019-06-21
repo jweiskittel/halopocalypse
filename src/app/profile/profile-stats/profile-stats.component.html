@@ -1,9 +1,36 @@
-<select #weaponId (change)='show()'>
-  <option selected disabled hidden>Select a weapon</option>
-  <option *ngFor='let weapon of weapons' value={{weapon.id}}>{{ weapon.name }}</option>
-</select>
-
-<h2>{{ selectedWeapon[0].name }}</h2>
-<p>Kills: {{ selectedArenaWeapon[0].TotalKills }}</p>
-<p>Headshot Kills: {{ selectedArenaWeapon[0].TotalHeadshots }}</p>
-<p>Accuracy: {{ selectedArenaWeapon[0].TotalShotsLanded / selectedArenaWeapon[0].TotalShotsFired * 100 }} </p>
+<div class="row">
+  <div class="col-md-4">
+    <div class='statsCard'>
+      <h1>{{ kdaRatio }}</h1>
+      <p>Kills: {{ totalKills }}</p>
+      <p>Deaths: {{ totalDeaths }}</p>
+      <p>Assists: {{ totalAssists }}</p>
+      <p>Games: {{ totalGamesPlayed }}</p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <h2>Miscellaneous</h2>
+    <p>Win Percentage: {{ winPercentage }}%</p>
+    <p>Headshot Kills: {{ totalHeadshots }}</p>
+    <p>Grenade Kills: {{ totalGrenadeKills }}</p>
+    <p>Power Weapon Kills: {{ totalPowerWeaponKills }}</p>
+    <p>Melee Kills: {{ totalMeleeKills }}</p>
+    <p>Assassinations: {{ totalAssassinations }}</p>
+    <p>Ground Pound Kills: {{ totalGroundPoundKills }}</p>
+    <p>Spartan Charge Kills: {{ totalSpartanChargeKills }}</p>
+  </div>
+    <div class="col-md-4">
+      <select #weaponId (change)='show()'>
+        <option selected disabled hidden>Select a weapon</option>
+        <option *ngFor='let weapon of weaponsList' value={{weapon.id}}>{{ weapon.name }}</option>
+      </select>
+  
+      <div *ngIf='selectedWeapon && selectedArenaWeapon'>
+        <!-- <h2>{{ selectedWeapon[0].name }}</h2> -->
+        <img src="{{ selectedWeapon[0].smallIconImageUrl }}" alt="{{ selectedWeapon[0].name }}">
+        <p>Kills: {{ selectedArenaWeapon[0].TotalKills }}</p>
+        <p>Headshot Kills: {{ selectedArenaWeapon[0].TotalHeadshots }}</p>
+        <p>Accuracy: {{ accuracy }}%</p>
+      </div>
+    </div>
+</div>

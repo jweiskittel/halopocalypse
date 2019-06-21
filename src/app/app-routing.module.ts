@@ -7,12 +7,13 @@ import { WeaponsComponent } from './weapons/weapons.component';
 import { EnemiesComponent } from './enemies/enemies.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { RanksComponent } from './ranks/ranks.component';
+import { ArenaMapsComponent } from './maps/arena-maps/arena-maps.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   {path: 'profile/:id', component: ProfileComponent},
-  {path: 'maps', component: MapsComponent},
+  {path: 'maps', component: ArenaMapsComponent},
   {path: 'weapons', component: WeaponsComponent},
   {path: 'enemies', component: EnemiesComponent},
   {path: 'vehicles', component: VehiclesComponent},

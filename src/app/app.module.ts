@@ -15,6 +15,9 @@ import { ProfileStatsComponent } from './profile/profile-stats/profile-stats.com
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { EnemiesComponent } from './enemies/enemies.component';
 import { RanksComponent } from './ranks/ranks.component';
+import { CampaignMapsComponent } from './maps/campaign-maps/campaign-maps.component';
+import { WarzoneMapsComponent } from './maps/warzone-maps/warzone-maps.component';
+import { ArenaMapsComponent } from './maps/arena-maps/arena-maps.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { RanksComponent } from './ranks/ranks.component';
     ProfileStatsComponent,
     VehiclesComponent,
     EnemiesComponent,
-    RanksComponent
+    RanksComponent,
+    CampaignMapsComponent,
+    WarzoneMapsComponent,
+    ArenaMapsComponent
   ],
   imports: [
     BrowserModule,
