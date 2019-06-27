@@ -19,7 +19,6 @@ export class RanksComponent implements OnInit {
         this.lowRanks = ranks.filter(
           rank => rank.name !== 'Unranked' && rank.name !== 'Onyx' && rank.name !== 'Champion'
         );
-        console.log(this.lowRanks);
         this.highRanks = ranks.filter(
           rank => rank.name === 'Onyx' || rank.name === 'Champion'
         );

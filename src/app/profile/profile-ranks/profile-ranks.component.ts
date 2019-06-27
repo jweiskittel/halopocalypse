@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { MetadataService } from 'src/app/services/metadata.service';
 import { Seasons } from 'src/app/models/seasons.model';
-import { CSRDesignations } from 'src/app/models/csr-designations.model';
 import { ArenaStatsService } from 'src/app/services/arena-stats.service';
 import { ActivatedRoute, Params } from '@angular/router';
 import { ArenaStats } from 'src/app/models/arena-stats.model';
-import { timingSafeEqual } from 'crypto';
+import { CSRDesignations } from '../../models/csr-designations.model';
 
 @Component({
   selector: 'app-profile-ranks',
@@ -28,7 +27,7 @@ export class ProfileRanksComponent implements OnInit {
     this.metadataService.getCSRDesignations().subscribe(
       (ranks: CSRDesignations[]) => {
         this.ranks = ranks;
-        console.log('Ranks: ' + ranks);
+        console.log(this.ranks);
       }
     );
 
