@@ -10,3 +10,48 @@ input {
 i {
     color: gray
 }
+
+nav.navbar.navbar-default {
+    margin: 0;
+    border: none;
+    height: 5vh
+}
+
+div.container-fluid {
+    background: linear-gradient(rgb(50, 50, 50), black)
+}
+
+li a:hover {
+    color: white
+}
+
+li.active a {
+    background: rgb(39, 67, 91);
+    color: white;
+}
+
+li.active a:focus {
+    background: rgb(39, 67, 91);
+    color: white;
+}
+
+ul.dropdown-menu {
+    background: rgb(39, 67, 91)
+}
+
+.dropdown-menu a {
+    color: white;
+    background: rgb(39, 67, 91)
+}
+
+
+
+li.dropdown.open a.dropdown-toggle {
+    background: rgb(39, 67, 91);
+    color: white
+}
+
+ul.dropdown-menu a:hover {
+    color: rgb(39, 67, 91);
+    background: white
+}

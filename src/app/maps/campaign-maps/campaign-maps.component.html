@@ -1,3 +1,9 @@
-<p>
-  campaign-maps works!
-</p>
+<div class='background'>
+  <div class='blur'>
+    <div *ngFor='let mission of campaignMissions' class='spacing'>
+      <h1>{{ mission.missionNumber }}. {{ mission.name }}</h1>
+      <img src="{{ mission.imageUrl }}" alt="{{ mission.name }}">
+      <p>{{ mission.description }}</p>
+    </div>
+  </div>
+</div>

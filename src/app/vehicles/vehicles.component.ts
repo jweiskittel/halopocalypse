@@ -17,7 +17,6 @@ export class VehiclesComponent implements OnInit {
   ngOnInit() {
     this.metadataService.getVehicles().subscribe(
       (vehicles: Vehicles[]) => {
-        console.log(vehicles);
         this.unsc = vehicles.filter(
           vehicle => vehicle.name === 'Scorpion' || vehicle.name === 'Mantis' ||
           vehicle.name === 'Warthog' || vehicle.name === 'Mongoose' || vehicle.name === 'Wasp'

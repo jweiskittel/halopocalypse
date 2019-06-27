@@ -1,0 +1,37 @@
+img {
+    width: 55vw;
+    margin: auto;
+    display: block;
+    border: solid 4px rgba(136, 192, 231, 0.544)
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    padding-bottom: 3vh
+}
+
+p {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    width: 50vw;
+    margin: auto;
+    padding-top: 4vh
+}
+
+.spacing {
+    padding: 5vh 0vh
+}
+
+.background {
+    background-image: url('https://d1lss44hh2trtw.cloudfront.net/assets/editorial/2015/09/H5-Guardians-Warzone-Apex-7-Raider.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.blur {
+    background: rgba(0, 0, 0, 0.8);
+}

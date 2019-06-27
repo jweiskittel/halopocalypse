@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,8 +8,9 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   @ViewChild('gamertag') gamertag: ElementRef;
+  @ViewChild('dropdown') dropdown: ElementRef;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private renderer: Renderer2) { }
 
   ngOnInit() {
   }

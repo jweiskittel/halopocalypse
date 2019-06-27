@@ -1,7 +1,92 @@
 img {
     margin: auto;
+    display: block;
+    width: 230px
+}
+
+h1 {
+    margin: 0;
+    padding: 2vh 0 2vh 5vw;
+    color: white
 }
 
 h4 {
     text-align: center;
+}
+
+h2 {
+    margin-left: 2vw
+}
+
+.blur {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2vh 0 4vh 0
+}
+
+.background {
+    background: black;
+}
+
+.Bronze {
+    background: url('../../assets/banner1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 30%;
+    color: white;
+    margin: 2vh 0;
+    
+}
+
+.Silver {
+    background: url('../../assets/banner2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 30%;
+    color: white;
+    margin: 2vh 0
+}
+
+.Gold {
+    background: url('../../assets/banner3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 10%;
+    color: white;
+    margin: 2vh 0
+}
+
+.Platinum {
+    background: url('../../assets/banner6.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 15%;
+    color: white;
+    margin: 2vh 0
+}
+
+.Diamond {
+    background: url('../../assets/banner7.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 30%;
+    color: white;
+    margin: 2vh 0
+}
+
+.Onyx {
+    background: url('../../assets/banner5.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 10%;
+    color: white;
+    margin: 2vh 0
+}
+
+.Champion {
+    background: url('../../assets/banner4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 10%;
+    color: white;
+    margin: 2vh 0 0 0
 }

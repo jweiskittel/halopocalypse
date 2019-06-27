@@ -8,19 +8,21 @@ import { MetadataService } from 'src/app/services/metadata.service';
   styleUrls: ['./arena-maps.component.css']
 })
 export class ArenaMapsComponent implements OnInit {
-  maps: Map[];
-  arenaMaps: Map[];
+  maps: Map[] = [];
+  arenaMaps: Map[] = [];
 
   constructor(private mapService: MetadataService) { }
 
   ngOnInit() {
     this.mapService.getMaps().subscribe(
       (maps: Map[]) => {
-        this.maps = maps;
+        maps.sort((a, b) => (a.name > b.name) ? 1 : -1);
+        this.maps = maps.filter(
+          (map: Map) => map.supportedGameModes !== null
+        );
         this.arenaMaps = this.maps.filter(
           (map: Map) => map.supportedGameModes.includes('Arena')
         );
-        console.log(this.arenaMaps);
       }
     );
   }

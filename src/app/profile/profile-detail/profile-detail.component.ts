@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { ProfileService } from '../../services/profile.service';
 import { Profile } from '../../models/profile.model';
 import { HttpErrorResponse } from '@angular/common/http';
@@ -14,7 +14,11 @@ export class ProfileDetailComponent implements OnInit {
   emblem: string;
   spartan: string;
 
-  constructor(private route: ActivatedRoute, private profileService: ProfileService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private profileService: ProfileService,
+    private router: Router
+    ) { }
 
   ngOnInit() {
     this.route.params.subscribe(
@@ -47,6 +51,10 @@ export class ProfileDetailComponent implements OnInit {
         );
       }
     );
+  }
+
+  loadCompany(company: string) {
+    this.router.navigate(['company', company], {queryParamsHandling: 'preserve'});
   }
 
 }

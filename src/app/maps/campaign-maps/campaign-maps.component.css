@@ -1,0 +1,38 @@
+img {
+    width: 55vw;
+    margin: auto;
+    display: block;
+    border: solid 4px rgba(136, 192, 231, 0.544)
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    padding-bottom: 3vh
+}
+
+p {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    width: 50vw;
+    margin: auto;
+    padding-top: 4vh
+}
+
+.spacing {
+    padding: 5vh 0vh
+}
+
+.background {
+    background-image: url('https://www.xtrafondos.com/wallpapers/personajes-de-halo-5-guardians-2330.jpg');
+    background-size: 100vw;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position-y: 50%
+}
+
+.blur {
+    background: rgba(0, 0, 0, 0.8);
+}

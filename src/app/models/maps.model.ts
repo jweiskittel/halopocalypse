@@ -4,5 +4,5 @@ export class Map {
         public id: string,
         public imageUrl: string,
         public name: string,
-        public supportedGameModes: [string]) {}
+        public supportedGameModes: string[]) {}
 }

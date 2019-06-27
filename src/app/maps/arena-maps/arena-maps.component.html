@@ -1,3 +1,9 @@
-<p>
-  arena-maps works!
-</p>
+<div class="background">
+  <div class="blur">
+    <div *ngFor='let map of arenaMaps' class='spacing'>
+      <h1>{{ map.name }}</h1>
+      <img src="{{ map.imageUrl }}" alt="{{ map.name }}">
+      <p>{{ map.description }}</p>
+    </div>
+  </div>
+</div>

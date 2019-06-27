@@ -23,7 +23,6 @@ export class RanksComponent implements OnInit {
         this.highRanks = ranks.filter(
           rank => rank.name === 'Onyx' || rank.name === 'Champion'
         );
-        console.log(this.highRanks);
       }
     );
   }

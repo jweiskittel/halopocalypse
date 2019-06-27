@@ -16,7 +16,6 @@ export class WeaponsComponent implements OnInit {
   ngOnInit() {
     this.metadataService.getWeapons().subscribe(
       (weapons: Weapon[]) => {
-        console.log(weapons);
         weapons.sort((a, b) => (a.name > b.name) ? 1 : -1);
         this.weapons = weapons.filter(
           weapon => (weapon.type === 'Standard' || weapon.type === 'Power')
