@@ -28,7 +28,7 @@ export class ProfileRanksComponent implements OnInit {
     this.metadataService.getCSRDesignations().subscribe(
       (ranks: CSRDesignations[]) => {
         this.ranks = ranks;
-        // console.log(ranks);
+        console.log('Ranks: ' + ranks);
       }
     );
 
@@ -37,20 +37,9 @@ export class ProfileRanksComponent implements OnInit {
         this.arenaService.getStats(params['id']).subscribe(
           (stats: ArenaStats) => {
             this.stats = stats;
+            console.log(this.stats);
           }
         );
-        // this.metadataService.getSeasons().subscribe(
-        //   (seasons: Seasons[]) => {
-        //     this.seasons = seasons;
-        //     console.log(this.seasons);
-        //     setTimeout(() => {
-        //       this.thisSeason = this.seasons.filter(
-        //         (season: Seasons) => (season.id === this.stats.Results[0].Result.ArenaStats.ArenaPlaylistStatsSeasonId)
-        //       );
-        //       console.log(this.thisSeason);
-        //     }, 400);
-        //   }
-        // );
       }
     );
 

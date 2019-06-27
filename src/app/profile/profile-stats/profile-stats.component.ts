@@ -67,7 +67,6 @@ export class ProfileStatsComponent implements OnInit {
           (stats: ArenaStats) => {
 
             this.arenaStats = stats;
-            console.log(this.arenaStats);
             this.arenaWeapons = stats.Results[0].Result.ArenaStats.WeaponStats;
 
             this.arenaWeapons.map(
