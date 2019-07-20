@@ -1,8 +1,30 @@
-.row { 
-    color: white;
-    background: black
-}
-
 a {
     cursor: pointer;
+}
+
+.emblem {
+    height: 20vh
+}
+
+h1, h3 {
+    color: white;
+}
+
+.underline {
+    background:
+        linear-gradient(
+        to left, 
+      rgba(0, 0, 0, 0) 20%,
+      rgb(48, 119, 191) 80%
+        )
+        left 
+        bottom  
+        no-repeat; 
+    background-size: 100% 2px;
+    min-height: 20vh;
+    margin: 1vh
+}
+
+.row {
+    max-width: 99vw
 }

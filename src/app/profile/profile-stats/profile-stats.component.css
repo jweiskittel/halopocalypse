@@ -1,0 +1,27 @@
+.statsCard {
+    width: 10vw;
+    margin: auto;
+    color: white
+}
+
+.kda {
+    color: white;
+    font-size: 18px;
+}
+
+.stats {
+    border: solid 2px white;
+    border-radius: 5%;
+    padding: 2vh;
+    text-align: center;
+}
+
+.miscStats {
+    color: white;
+    margin: auto;
+    width: 20vw
+}
+
+div {
+    max-width: 99vw;
+}

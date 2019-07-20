@@ -21,13 +21,13 @@ export class ProfileService {
   }
 
   getEmblem(gamertag: string) {
-    return this.http.get(`https://cors-anywhere.herokuapp.com/https://www.haloapi.com/profile/h5/profiles/${gamertag}/emblem`, {
+    return this.http.get(`https://cors-anywhere.herokuapp.com/https://www.haloapi.com/profile/h5/profiles/${gamertag}/emblem?size=512`, {
       headers: headers
     });
   }
 
   getSpartan(gamertag: string) {
-    return this.http.get(`https://cors-anywhere.herokuapp.com/https://www.haloapi.com/profile/h5/profiles/${gamertag}/spartan`, {
+    return this.http.get(`https://cors-anywhere.herokuapp.com/https://www.haloapi.com/profile/h5/profiles/${gamertag}/spartan?size=256`, {
       headers: headers
     });
   }

@@ -55,7 +55,10 @@ export class ProfileStatsComponent implements OnInit {
 
         this.weapons.map(
           (weapon: Weapon) => {
-            this.weaponNameArray.push(+weapon.id);
+            // tslint:disable-next-line:max-line-length
+            if (weapon.name !== 'Reach Grenade Launcher' && weapon.name !== 'SCORPION ANTI INFANTRY TURRET' && weapon.name !== 'Sentinel Beam') {
+              this.weaponNameArray.push(+weapon.id);
+            }
           }
         );
       }
@@ -65,6 +68,9 @@ export class ProfileStatsComponent implements OnInit {
       (params: Params) => {
         this.arenaService.getStats(params['id']).subscribe(
           (stats: ArenaStats) => {
+            this.weaponId.nativeElement.value = 'Select a weapon';
+            this.selectedWeapon = null;
+            this.selectedArenaWeapon = null;
 
             this.arenaStats = stats;
             this.arenaWeapons = stats.Results[0].Result.ArenaStats.WeaponStats;

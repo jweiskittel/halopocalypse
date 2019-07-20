@@ -1,23 +1,28 @@
 <div class="row">
   <div class="col-md-4">
     <div class='statsCard'>
-      <h1>{{ kdaRatio }}</h1>
-      <p>Kills: {{ totalKills }}</p>
-      <p>Deaths: {{ totalDeaths }}</p>
-      <p>Assists: {{ totalAssists }}</p>
-      <p>Games: {{ totalGamesPlayed }}</p>
+      <h1 class='kda'>KDA</h1>
+      <div class="stats">
+        <h1>{{ kdaRatio }}</h1>
+        <p>Kills: {{ totalKills }}</p>
+        <p>Deaths: {{ totalDeaths }}</p>
+        <p>Assists: {{ totalAssists }}</p>
+        <p>Games: {{ totalGamesPlayed }}</p>
+      </div>
     </div>
   </div>
   <div class="col-md-4">
-    <h2>Miscellaneous</h2>
-    <p>Win Percentage: {{ winPercentage }}%</p>
-    <p>Headshot Kills: {{ totalHeadshots }}</p>
-    <p>Grenade Kills: {{ totalGrenadeKills }}</p>
-    <p>Power Weapon Kills: {{ totalPowerWeaponKills }}</p>
-    <p>Melee Kills: {{ totalMeleeKills }}</p>
-    <p>Assassinations: {{ totalAssassinations }}</p>
-    <p>Ground Pound Kills: {{ totalGroundPoundKills }}</p>
-    <p>Spartan Charge Kills: {{ totalSpartanChargeKills }}</p>
+    <div class="miscStats">
+      <h2>Miscellaneous</h2>
+      <p>Win Percentage: {{ winPercentage }}%</p>
+      <p>Headshot Kills: {{ totalHeadshots }}</p>
+      <p>Grenade Kills: {{ totalGrenadeKills }}</p>
+      <p>Power Weapon Kills: {{ totalPowerWeaponKills }}</p>
+      <p>Melee Kills: {{ totalMeleeKills }}</p>
+      <p>Assassinations: {{ totalAssassinations }}</p>
+      <p>Ground Pound Kills: {{ totalGroundPoundKills }}</p>
+      <p>Spartan Charge Kills: {{ totalSpartanChargeKills }}</p>
+    </div>
   </div>
     <div class="col-md-4">
       <select #weaponId (change)='show()'>

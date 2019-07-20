@@ -1,11 +1,17 @@
 <div class="row" *ngIf='profile'>
-  <div class="col-md-3">
-    <img src="{{ emblem }}" alt="{{ profile.Gamertag }}'s Emblem">
-  </div>
-  <div class="col-md-5 center">
-    <h1>{{ profile.Gamertag }}</h1>
-    <h3>{{ profile.ServiceTag }}</h3>
-    <a *ngIf='profile.Company !== null' (click)='loadCompany(profile.Company.Id)'><h4>{{ profile.Company.Name }}</h4></a>
+  <div class="col-md-5">
+    <div class="row underline">
+      <div class="col-md-3">
+        <img class='emblem' src="{{ emblem }}" alt="{{ profile.Gamertag }}'s Emblem">
+      </div>
+      <div class="col-md-9">
+        <h1>{{ profile.Gamertag }}</h1>
+        <h3>{{ profile.ServiceTag }}</h3>
+        <a *ngIf='profile.Company !== null' (click)='loadCompany(profile.Company.Id)'>
+          <h4>{{ profile.Company.Name }}</h4>
+        </a>
+      </div>
+    </div>
   </div>
   <div class="col md-4">
     <img src="{{ spartan }}" alt="{{ profile.Gamertag }}'s Spartan'">

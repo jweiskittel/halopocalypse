@@ -1,0 +1,23 @@
+img {
+    width: 25vh;
+    margin: auto;
+    display: block;
+}
+
+.row {
+    height: 30vh;
+}
+
+.rank {
+    text-align: center
+}
+
+.playlist {
+    height: 30vh;
+    line-height: 30vh;
+    margin: 0
+}
+
+div {
+    max-width: 99vw
+}

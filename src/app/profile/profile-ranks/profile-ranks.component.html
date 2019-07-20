@@ -1,4 +1,20 @@
-<div>
+<div *ngIf='rankedPlaylists.length > 0 && actualRanks.length > 0; else notRanked'>
   <p>Current Ranks:</p>
-  
+  <div class='row' *ngFor='let playlist of rankedPlaylists; let i = index'>
+    <p class="col-md-2 playlist">{{ playlist.name }}</p>
+    <div class="col-md-2">
+      <img src="{{ actualRanks[i].iconImageUrl }}" alt="">
+      <p class='rank' *ngIf='statsPlaylists[i].Csr.DesignationId === 1'>Bronze {{ statsPlaylists[i].Csr.Tier }}</p>
+      <p class='rank' *ngIf='statsPlaylists[i].Csr.DesignationId === 2'>Silver {{ statsPlaylists[i].Csr.Tier }}</p>
+      <p class='rank' *ngIf='statsPlaylists[i].Csr.DesignationId === 3'>Gold {{ statsPlaylists[i].Csr.Tier }}</p>
+      <p class='rank' *ngIf='statsPlaylists[i].Csr.DesignationId === 4'>Platinum {{ statsPlaylists[i].Csr.Tier }}</p>
+      <p class='rank' *ngIf='statsPlaylists[i].Csr.DesignationId === 5'>Diamond {{ statsPlaylists[i].Csr.Tier }}</p>
+      <p class='rank' *ngIf='csr[i].csr > 0 && csr[i].rank === null'>Onyx {{ csr[i].csr }}</p>
+      <p class='rank' *ngIf='csr[i].rank !== null'>Champion {{ csr[i].rank }}</p>
+    </div>
+  </div>
 </div>
+
+<ng-template #notRanked>
+  <h1>You aren't ranked in any playlist yet! Get some games in scrub!</h1>
+</ng-template>
